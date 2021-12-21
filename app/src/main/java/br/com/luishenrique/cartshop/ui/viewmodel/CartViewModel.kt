@@ -2,7 +2,7 @@ package br.com.luishenrique.cartshop.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import br.com.luishenrique.domain.entity.CartDTO
+import br.com.luishenrique.domain.entity.CarDTO
 import br.com.luishenrique.domain.service.Result
 import br.com.luishenrique.domain.usecase.CartUserCase
 import kotlinx.coroutines.CoroutineScope
@@ -12,8 +12,8 @@ import kotlinx.coroutines.withContext
 
 class CartViewModel(private val useCase: CartUserCase) {
 
-    private val _cart: MutableLiveData<Result<List<CartDTO>>> = MutableLiveData()
-    val cart: LiveData<Result<List<CartDTO>>> = _cart
+    private val _car: MutableLiveData<Result<List<CarDTO>?>?> = MutableLiveData()
+    val car: LiveData<Result<List<CarDTO>?>?> = _car
 
     private val _progressBar: MutableLiveData<Boolean> = MutableLiveData(false)
     val progressBar: LiveData<Boolean> = _progressBar
@@ -23,11 +23,12 @@ class CartViewModel(private val useCase: CartUserCase) {
     fun getAllCarts() {
         CoroutineScope(Dispatchers.IO).launch {
             _progressBar.postValue(true)
-            withContext(Dispatchers.IO) {
+            val response = withContext(Dispatchers.IO) {
                 pageCount.value?.let {
                     useCase.getAllCarts(it)
                 }
             }
+            _car.postValue(response)
             _progressBar.postValue(false)
         }
     }

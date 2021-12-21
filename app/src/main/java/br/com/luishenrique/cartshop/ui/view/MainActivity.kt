@@ -1,7 +1,8 @@
-package br.com.luishenrique.cartshop
+package br.com.luishenrique.cartshop.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.luishenrique.cartshop.R
 
 class MainActivity : AppCompatActivity() {
 
