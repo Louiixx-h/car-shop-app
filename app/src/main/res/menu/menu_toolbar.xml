@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/xMenuMake"
+        android:title="@string/marca"/>
+
+    <item
+        android:id="@+id/xMenuYear"
+        android:title="@string/ano"/>
+
+    <item
+        android:id="@+id/xMenuLowestPrice"
+        android:title="@string/menor_pre_o"/>
+
+    <item
+        android:id="@+id/xMenuBiggestPrice"
+        android:title="@string/maior_pre_o"/>
+</menu>
