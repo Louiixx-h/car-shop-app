@@ -34,7 +34,18 @@ class CartViewModel(private val useCase: CartUserCase) {
     }
 
     fun nextPage() {
-        pageCount.value?.plus(1)
+        pageCount.postValue(pageCount.value?.inc())
         getAllCarts()
+    }
+
+    fun previousPage() {
+        if (pageCount.value!! > 1) {
+            pageCount.postValue(pageCount.value?.dec())
+            getAllCarts()
+        }
+    }
+
+    fun fixImageList(cars: List<CarDTO>): List<CarDTO> {
+        return useCase.fixImageList(cars)
     }
 }

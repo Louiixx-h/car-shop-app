@@ -1,10 +1,27 @@
 <resources>
-    <string name="app_name">Cart Shop</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Car Shop</string>
     <string name="imagem_do_carro">Imagem do carro</string>
     <string name="favoritar_carro">Favoritar carro</string>
     <string name="tentar_novamente">Tentar novamente</string>
     <string name="carro_p_lido">carro pálido</string>
     <string name="sinal_do_wifi">Sinal do wifi</string>
+    <string name="marca">Marca</string>
+    <string name="maior_pre_o">Maior preço</string>
+    <string name="menor_pre_o">Menor preço</string>
+    <string name="ano">Ano</string>
+    <string name="ano_de_fabrica_o">Ano de Fabricação</string>
+    <string name="ano_do_modelo">Ano do Modelo</string>
+    <string name="km">KM</string>
+    <string name="vers_o">Versão</string>
+    <string name="modelo">Modelo</string>
+    <string name="especifica_es">Especificações:</string>
+    <string name="vou_levar">Vou Levar</string>
+    <string name="cor">Cor</string>
+    <string name="carregar_mais">Carregar mais</string>
+    <string name="anterior">Anterior</string>
+    <string name="pr_xima">Próxima</string>
+    <string name="voc_chegou_no_nfim_da_lista_de_carros">Você chegou no \nfim da lista de carros!</string>
+    <string name="voltar_para_a_tela_anterior">Voltar para a tela anterior</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
 </resources>

@@ -13,10 +13,50 @@
         android:orientation="vertical"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="1"
         tools:listitem="@layout/item_cart" />
 
     <LinearLayout
         android:id="@+id/xErrorContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/sinal_do_wifi"
+            android:src="@drawable/ic_wifi" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/carro_p_lido"
+            android:src="@drawable/ic_car_error" />
+
+        <Button
+            android:id="@+id/xTryAgain"
+            style="@style/textMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_stroke"
+            android:text="@string/tentar_novamente"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/xEndContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -31,26 +71,17 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_wifi"
-            android:contentDescription="@string/sinal_do_wifi"/>
+            android:contentDescription="@string/carro_p_lido"
+            android:src="@drawable/ic_car_error" />
 
-        <ImageView
+        <TextView
+            style="@style/textNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:src="@drawable/ic_car_error"
-            android:contentDescription="@string/carro_p_lido" />
-
-        <Button
-            android:id="@+id/xTryAgain"
-            style="@style/textMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/background_stroke"
-            android:text="@string/tentar_novamente"
-            android:textAllCaps="false"
-            android:textColor="@color/textColor" />
+            android:gravity="center"
+            android:text="@string/voc_chegou_no_nfim_da_lista_de_carros"
+            android:textColor="@color/PrimaryColor" />
     </LinearLayout>
 
     <ProgressBar
@@ -63,7 +94,22 @@
         android:progress="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/xDecPageEnd"
+        style="@style/buttonNormal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:text="@string/anterior"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
