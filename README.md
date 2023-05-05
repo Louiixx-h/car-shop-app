@@ -20,6 +20,9 @@
 <br>
 <br>
 
+### 👇Click on image to watch the video.
+[![Assista a o vídeo!](https://img.youtube.com/vi/R96AC6CF6yU/maxresdefault.jpg)](https://youtu.be/R96AC6CF6yU)
+
 <p>✔️ Android Studio</p>
 <p>✔️ Kotlin</p>
 <p>✔️ Coroutines</p>
